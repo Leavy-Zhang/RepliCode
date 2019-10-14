@@ -32,7 +32,6 @@ python slidingCountFromBam.py -i input.bam -w 50000 -t 1000 -f bg -o output.bedg
 #### Description:
 H2A.Z Facilitates Licensing and Activation of Early Replication. S50 algorithm was used to describe the DNA replication-timing of genomic regions of interest using reli-seq data [Gaetano Ivan Dellino and *et. al.*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530669/)
 
-#### Usage:
 Input files are a series of read per million (RPM), or other algorithm, normalized bedgraph/wiggle formatted files of time-course repli-seq data, such as S1,S2,S3 and *et.al*.
 1. Genomic bins of input files should be generated with the same parameters using **slidingCountFromBam.py** to ensure the consistency of genomic bin positions between files.
 2. Using **intersectBed** to retrieve read count for each genomic bin at each time point and then normalized using RPM-like method. An example of files is shown below:
@@ -67,4 +66,10 @@ F-score (firing score) was used to assess the effective firing efficiency of gen
 
 #### Usage:
 1. Region files can be prepared similarly as that of **computeS50.py** or a set of pre-predicted peak regions in bed format.
-2. Using **intersectBed** to **intersectBed** to retrieve read count as described for **computeS50.py**.
+2. Using **intersectBed** to **intersectBed** to retrieve read count for region/peaks of interest.
+3. Run script to compute F-score:
+   python F-score.py total_reads_of_untreated,total_reads_of_treated untreated.bed treated.bed output.F-score
+   
+#### Example:
+   python F-score.py 17321232,12987432 untreated.bed treated.bed my.F-score
+   

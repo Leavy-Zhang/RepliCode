@@ -12,20 +12,20 @@ This script was used for produce wiggle file using the input bam file.
 python script.py [options] arg1 arg2
 
 ##### Options:
-  -h, --help            show this help message and exit</br>
+  -h, --help&emsp;show this help message and exit</br>
   -i INBAM, --input-bam=INBAM</br>
-                        The inputted bam file.</br>
+  &emsp;&emsp;&emsp;The inputted bam file.</br>
   -w SLIDEWINDOW, --sliding-window=SLIDEWINDOW</br>
-                        The width (bp) of sliding window during tag counting</br>
-                        (DEFAULT: 10000).</br>
+&emsp;&emsp;&emsp;The width (bp) of sliding window during tag counting</br>
+&emsp;&emsp;&emsp;(DEFAULT: 10000).</br>
   -t INTERVALSTEP, --interval-step=INTERVALSTEP</br>
-                        Step length (bp) for each counting (DEFAULT: 1000).</br>
+&emsp;&emsp;&emsp;Step length (bp) for each counting (DEFAULT: 1000).</br>
   -f OUTFMT, --output-format=OUTFMT</br>
-                        bg:bedgraph, wig: wiggle.</br>
+&emsp;&emsp;&emsp;bg:bedgraph, wig: wiggle.</br>
   -o OUTFILE, --output-wig=OUTFILE</br>
-                        Specify the file in which the result should be stored.</br>
+&emsp;&emsp;&emsp;Specify the file in which the result should be stored.</br>
 ##### Example:</br>
-python slidingCountFromBam.py -i input.bam -w 50000 -t 1000 -f bg -o output.bedgraph</br>
+&emsp;&emsp;python slidingCountFromBam.py -i input.bam -w 50000 -t 1000 -f bg -o output.bedgraph</br>
 
 ---
 ### computeS50.py</br>
@@ -47,17 +47,17 @@ Input files are a series of read per million (RPM), or other algorithm, normaliz
 python script.py [options] arg1 arg2
 
 Options:</br>
-  -h, --help            show this help message and exit</br>
+  -h, --help&emsp;show this help message and exit</br>
   -i INFILES, --input-files=INFILES</br>
-                        The inputted wig/bedgraph files separated by comma.</br>
+&emsp;&emsp;&emsp;The inputted wig/bedgraph files separated by comma.</br>
   -t FILETYPE, --file-type=FILETYPE</br>
-                        Format of input files and output file, wiggle or</br>
-                        bedgraph.(Default: bedgraph)</br>
+&emsp;&emsp;&emsp;Format of input files and output file, wiggle or</br>
+&emsp;&emsp;&emsp;bedgraph.(Default: bedgraph)</br>
   -o OUTFILE, --output-wig=OUTFILE</br>
-                        Specify the file in which the result should be stored.</br></br>
+&emsp;&emsp;&emsp;Specify the file in which the result should be stored.</br></br>
 
 #### Example:
-python computeS50.py -i S1.bedgraph,S2.bedgraph,S3.bedgraph,S4.bedgraph -t bedgraph -o S50.bedgraph
+&emsp;&emsp;python computeS50.py -i S1.bedgraph,S2.bedgraph,S3.bedgraph,S4.bedgraph -t bedgraph -o S50.bedgraph
 
 ---
 ### F-score.py
@@ -68,8 +68,8 @@ F-score (firing score) was used to assess the effective firing efficiency of gen
 1. Region files can be prepared similarly as that of **computeS50.py** or a set of pre-predicted peak regions in bed format.</br>
 2. Using **intersectBed** to **intersectBed** to retrieve read count for region/peaks of interest.</br>
 3. Run script to compute F-score:</br>
-   python F-score.py total_reads_of_untreated,total_reads_of_treated untreated.bed treated.bed output.F-score</br>
+&emsp;&emsp;python F-score.py total_reads_of_untreated,total_reads_of_treated untreated.bed treated.bed output.F-score</br>
    
 #### Example:
-   python F-score.py 17321232,12987432 untreated.bed treated.bed my.F-score
+&emsp;python F-score.py 17321232,12987432 untreated.bed treated.bed my.F-score
    

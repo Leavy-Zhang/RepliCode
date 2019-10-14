@@ -37,10 +37,10 @@ Input files are a series of read per million (RPM), or other algorithm, normaliz
 1. Genomic bins of input files should be generated with the same parameters using **slidingCountFromBam.py** to ensure the consistency of genomic bin positions between files.
 2. Using **intersectBed** to retrieve read count for each genomic bin at each time point and then normalized using RPM-like method. An example of files is shown below:
 
-chr   start    end    normValue
-chr1  1       5000     0.36
-chr1  5001   10000     0.37
-chr1  10001  15000     0.34
+</br>chr   start    end    normValue<br/>
+</br>chr1  1       5000     0.36<br/>
+</br>chr1  5001   10000     0.37<br/>
+</br>chr1  10001  15000     0.34<br/>
 
 3. Run script to calculate S50 score for all genomic bins.
 
@@ -57,8 +57,14 @@ Options:
   -o OUTFILE, --output-wig=OUTFILE
                         Specify the file in which the result should be stored.
 
-### Example:
+#### Example:
 python computeS50.py -i S1.bedgraph,S2.bedgraph,S3.bedgraph,S4.bedgraph -t bedgraph -o S50.bedgraph
 
-
 ---
+### F-score.py
+#### Description:
+F-score (firing score) was used to assess the effective firing efficiency of genomic regions using nascent strand (NS)-seq data, each sample contains two parallel data, RNase untreated and treated sequencing data.
+
+#### Usage:
+1. Region files can be prepared similarly as that of **computeS50.py** or a set of pre-predicted peak regions in bed format.
+2. Using **intersectBed** to **intersectBed** to retrieve read count as described for **computeS50.py**.

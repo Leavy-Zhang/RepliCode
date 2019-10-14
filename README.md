@@ -37,10 +37,10 @@ Input files are a series of read per million (RPM), or other algorithm, normaliz
 1. Genomic bins of input files should be generated with the same parameters using **slidingCountFromBam.py** to ensure the consistency of genomic bin positions between files.
 2. Using **intersectBed** to retrieve read count for each genomic bin at each time point and then normalized using RPM-like method. An example of files is shown below:
 
-</br>chr   start    end    normValue<br/>
-</br>chr1  1       5000     0.36<br/>
-</br>chr1  5001   10000     0.37<br/>
-</br>chr1  10001  15000     0.34<br/>
+</br>chr&emsp;start&emsp;end&emsp;normValue<br/>
+</br>chr1&emsp;1&emsp;5000&emsp;0.36<br/>
+</br>chr1&emsp;5001&emsp;10000&emsp;0.37<br/>
+</br>chr1&emsp;10001&emsp;15000&emsp;0.34<br/>
 
 3. Run script to calculate S50 score for all genomic bins.
 

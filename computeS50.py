@@ -143,8 +143,8 @@ def main():
     outfile=options.outfile
     info('Collecting input parameters...')
     info('Input file list: %s' % infiles)
-	info('Format during writing result as output: %s' % filetype)
-	info('Name of output file: %s' % outfile)
+    info('Format during writing result as output: %s' % filetype)
+    info('Name of output file: %s' % outfile)
     for turn in xrange(len(infiles.split(','))):
         try:
             rawdb

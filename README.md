@@ -26,7 +26,6 @@ python script.py [options] arg1 arg2
                         Specify the file in which the result should be stored.
 ##### Example:
 python slidingCountFromBam.py -i input.bam -w 50000 -t 1000 -f bg -o output.bedgraph
----
 
 ---
 ### computeS50.py
@@ -60,4 +59,6 @@ Options:
 
 ### Example:
 python computeS50.py -i S1.bedgraph,S2.bedgraph,S3.bedgraph,S4.bedgraph -t bedgraph -o S50.bedgraph
+
+
 ---

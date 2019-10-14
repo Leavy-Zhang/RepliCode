@@ -2,6 +2,7 @@
 
 ### Major codes for paper "H2A.Z Facilitates Licensing and Activation of Early Replication" are deposited here. There might be some error during running them, please let me know if needed (E-mail: lwzhanghz@163.com)
 
+---
 ### slidingCountFromBam.py
 #### Description:
 This script was used for produce wiggle file using the input bam file.
@@ -25,8 +26,9 @@ python script.py [options] arg1 arg2
                         Specify the file in which the result should be stored.
 ##### Example:
 python slidingCountFromBam.py -i input.bam -w 50000 -t 1000 -f bg -o output.bedgraph
+---
 
-
+---
 ### computeS50.py
 #### Description:
 H2A.Z Facilitates Licensing and Activation of Early Replication. S50 algorithm was used to describe the DNA replication-timing of genomic regions of interest using reli-seq data [Gaetano Ivan Dellino and *et. al.*](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3530669/)
@@ -36,12 +38,10 @@ Input files are a series of read per million (RPM), or other algorithm, normaliz
 1. Genomic bins of input files should be generated with the same parameters using **slidingCountFromBam.py** to ensure the consistency of genomic bin positions between files.
 2. Using **intersectBed** to retrieve read count for each genomic bin at each time point and then normalized using RPM-like method. An example of files is shown below:
 
---------------------
 chr   start    end    normValue
 chr1  1       5000     0.36
 chr1  5001   10000     0.37
 chr1  10001  15000     0.34
---------------------
 
 3. Run script to calculate S50 score for all genomic bins.
 
@@ -60,3 +60,4 @@ Options:
 
 ### Example:
 python computeS50.py -i S1.bedgraph,S2.bedgraph,S3.bedgraph,S4.bedgraph -t bedgraph -o S50.bedgraph
+---

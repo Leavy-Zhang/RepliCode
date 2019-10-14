@@ -12,7 +12,7 @@ This script was used for produce wiggle file using the input bam file.
 python script.py [options] arg1 arg2
 
 ##### Options:
-  -h, --help            show this help message and exit
+  -h, --help            show this help message and exit</br>
   -i INBAM, --input-bam=INBAM
                         The inputted bam file.
   -w SLIDEWINDOW, --sliding-window=SLIDEWINDOW

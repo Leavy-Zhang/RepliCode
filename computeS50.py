@@ -17,7 +17,7 @@ import logging
 
 
 use_msg='python script.py [options] arg1 arg2'
-descr='This script was used for produce wiggle file using the input bam file.'
+descr='This script was used for computing S50 score using repli-seq data.'
 
 parser = OptionParser(usage=use_msg,description=descr,add_help_option=True)
 

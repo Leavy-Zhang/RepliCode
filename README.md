@@ -5,7 +5,7 @@
 ---
 ### slidingCountFromBam.py
 #### Description:
-This script was used for produce wiggle file using the input bam file.
+This script was used for produce genomic profiles in wiggle/bedgraph format using the input bam file.
 #### Prerequisite:
 *Python module:* pysam, numpy
 #### Usage:
